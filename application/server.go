@@ -24,6 +24,7 @@ func GetOutboundIP() net.IP {
 		return nil, err
 	}
 	req.Header.Set("Content-Type", "application/json")
+	return
 }
 
 func (s *Server) Run(port string, handler http.Handler) error {
